@@ -26,11 +26,11 @@ export class AuthService {
     const authState = uuidv4();
     localStorage.setItem("authState", authState);
 
-    const clientId = "8b2fa8cbb5dab88d80dd";
-    const redirectUri = "redirect_uri=https://localhost:4200";
+    const clientId = "ea9f15d9c88471a08302";
+    
 
     const queryParameters = [
-      `client_id=${clientId}`,
+      `client_id=ea9f15d9c88471a08302`,
       `state=${authState}`,
       'allow_signup=true',
       encodeURIComponent('redirect_uri=https://salmon-beach-09e8d8e10.1.azurestaticapps.net/'),
