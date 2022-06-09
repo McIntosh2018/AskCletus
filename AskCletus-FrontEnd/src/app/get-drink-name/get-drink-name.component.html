@@ -1,8 +1,7 @@
 <form class =theform>
-  <label>Search For A Drink By Name:</label>
+  <label>Search For Drank By Name:</label>
   <input type="text" [formControl]="drinkNameControl" />
 </form>
-
 <ul class="bar-container">
   <li *ngFor="let drink of drinks$ | async" class="list-container">
     <a [routerLink]="['/search-results', drink.idDrink]"
