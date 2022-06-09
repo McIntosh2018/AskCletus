@@ -22,7 +22,7 @@ import { HistoryService } from 'src/app/Services/history.service';
   templateUrl: './drink-history.component.html',
   styleUrls: ['./drink-history.component.css'],
 })
-export class DrinkHistoryComponent implements OnInit, AfterViewInit, OnDestroy {
+export class DrinkHistoryComponent implements OnInit, AfterViewInit {
   histories: HistoryResponse[] = [];
 
   constructor(
@@ -54,7 +54,7 @@ export class DrinkHistoryComponent implements OnInit, AfterViewInit, OnDestroy {
     map((params) => params.get('id')),
     filter((id) => id !== null),
     map((id) => parseInt(id as string, 10)),
-    switchMap((id: number) => this._historyrService.postHistory(id))
+    switchMap((id: number) => this._drinkService.getDrinkById(id))
   );
 
   @ViewChild('button')
@@ -66,15 +66,15 @@ export class DrinkHistoryComponent implements OnInit, AfterViewInit, OnDestroy {
     this.postBar$ = this.click$.pipe(
       startWith(() => {}),
       mergeMap((_clickEvent) => this.userBarId$),
-      //tap(console.log),
+      tap(console.log),
       ),
       mergeMap((userId) =>
-      this.drinkHistory$.pipe(map((drinkId) => ({ userId, drinkId })))
-    ),
-      mergeMap((drinkAndId: { drink: string; userId: number }) =>
+      this.drinkHistory$.pipe(
+        map((drinkId) => ({ userId, drinkId })))),
+      mergeMap((drinkAndId: { drinkId: number; userId: number }) =>
         this._historyrService.postHistory(drinkAndId)
-      )
-    );
+      );
+
     this.postHistorySubscription = this.postBar$.subscribe(() =>
       this._router.navigate(['app-bar-home'])
     );
@@ -86,7 +86,7 @@ export class DrinkHistoryComponent implements OnInit, AfterViewInit, OnDestroy {
     });
   }
 
-  ngOnDestroy(): void {
-    this.postHistorySubscription.unsubscribe();
-  }
+  // ngOnDestroy(): void {
+  //   this.postHistorySubscription.unsubscribe();
+  // }
 }

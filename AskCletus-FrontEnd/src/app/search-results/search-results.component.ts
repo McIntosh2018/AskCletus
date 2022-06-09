@@ -23,6 +23,3 @@ export class SearchResultsComponent implements OnInit {
 
   ngOnInit(): void {}
 }
-
-
-//getHistory(id: number)
