@@ -1,17 +1,24 @@
 @media only screen and (min-width: 300px) {
 
-
-    .bar-container {
+    #barHome{
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+       
+        align-items: center;
+        height: 100%;
+        width: 80vw;
+    }
+   
+    ul{
         display: flex;
         flex-direction: row;
         justify-content: center;
-        list-style: none;
-        flex-wrap: wrap;
-        width: 90vw;
-        height: 70vh;
+        width: 80vw;
+        height:100px;
+        max-width: 700px;
+        scroll-behavior: smooth;
     }
-    
-
 
     ul li{
         display: flex;
@@ -27,11 +34,10 @@
         background-attachment: fixed;
         height: 40px;
         width: 40px;
-        margin: 2em;
+        margin: 4px;
         padding: 2em;
         color:rgb(255, 255, 255);
         text-shadow: 1px 1px black;
-
     }
 
     li p{
@@ -48,20 +54,63 @@
         cursor:pointer;
 background-color: rgb(255, 226, 5);
     }
+
+
+
+    .bar-bottom{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 500px;
+        justify-content: center;
+    }
+
+    .bar-bottom:hover{
+
+        background-image:url(../../images/internationalTractor.jpg);
+        background-size: 700px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+
+    #add{
+        height: 30px;
+        width: 70px;
+    }
+
+    #add a{
+        text-decoration: none;
+        color: black;
+    }
+    #add span{
+        display: none;
+    }
+    
+
+    .far-bottom{
+        margin-left: 10px;
+    }
 }
 @media only screen and (min-width: 600px) {
+
+
+
     .bar-container {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         list-style: none;
         flex-wrap: wrap;
         margin-top: 200px;
         width: 90vw;
-        height: 70vh;
+     
     }
     
-
+    ul{
+        height: 30vh;
+    }
 
     ul li{
         display: flex;
@@ -78,7 +127,7 @@ background-color: rgb(255, 226, 5);
         height: 50px;
         width: 70px;
        
-        color:rgb(255, 229, 31);
+        color:rgb(255, 255, 255);
         text-shadow: 1px 1px black;
 
     }
@@ -92,15 +141,37 @@ background-color: rgb(255, 226, 5);
         height: 30px;
         border-radius: 11px;
     }
+
+    #barHome{
+    margin-top: 260px;
+    height: 50%;
+    }
+
+    
+    .bar-bottom{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        height: 500px;
+        justify-content: center;
+    }
+  
+
+    #add{
+        height: 30px;
+        width: 120px;
+        margin-right: 10px;
+    }
+    #add mat-icon{
+        display: none;
+    }
+    #add span{
+        display: block;
+    }
 }
 @media only screen and (min-width: 768px) {
 
-    #barHome{
-        width: 100vw;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
+
 
 .bar-container {
     display: flex;
@@ -127,8 +198,8 @@ background-color: rgb(255, 226, 5);
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
-        height: 110px;
-        width: 110px;
+        height: 80px;
+        width: 80px;
         box-shadow: -7px 5px 17px;
         color:rgb(225, 225, 225);
         text-shadow: 2px 2px black;
