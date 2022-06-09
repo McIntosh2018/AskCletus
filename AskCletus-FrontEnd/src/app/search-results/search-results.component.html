@@ -6,6 +6,7 @@
 			<p>{{drinks.drinks[0].strIngredient1}}: {{drinks.drinks[0].strMeasure1}}</p>
 			<p>{{drinks.drinks[0].strIngredient2}}: {{drinks.drinks[0].strMeasure2}}</p>
 			<p>{{drinks.drinks[0].strIngredient3}}: {{drinks.drinks[0].strMeasure3}}</p>
+			<a [routerLink]="['/app-drink-history', drinks.drinks[0].idDrink]">Add This Drink To Your History</a>
 	</ng-container>
 	<ng-template #gettingDrink>
 		Getting yo drank foo
