@@ -14,7 +14,7 @@ export class SearchResultsComponent implements OnInit {
     private _drinkService: DrinkServiceService
   ) {}
 
-  drink$ = this._activatedRoute.paramMap.pipe(
+  drinkHistory$ = this._activatedRoute.paramMap.pipe(
     map((params) => params.get('id')),
     filter((id) => id !== null),
     map((id) => parseInt(id as string, 10)),

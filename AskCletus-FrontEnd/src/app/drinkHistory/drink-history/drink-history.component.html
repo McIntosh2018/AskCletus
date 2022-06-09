@@ -5,7 +5,7 @@
     <ul class="bar-container">
       <li *ngFor="let history of userHistory" class="list-container" cdkDrag>
         <p>Ingredient Name:
-          <a [routerLink]="['/search-results', history.drinkId]" 
+          <p><a [routerLink]="['/search-results', history.drinkId]" 
           target="_blank" rel="noopener noreferrer">{{ history.drinkId }}
           </a></p>
         <!-- <button id = "add-button"  color="accent" #button>Add To Your History</button> -->
