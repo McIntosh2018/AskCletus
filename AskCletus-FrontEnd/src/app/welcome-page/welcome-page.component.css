@@ -5,15 +5,17 @@
            align-items: center;
            justify-content: center;
        
-       
-       
            height: 100vh;
        }
    
        a{
+        
            text-decoration: none;
            color: black;
            
+       }
+       button{
+        font: normal bold normal 1.8em/1em Gloria;
        }
    
        .cover{
@@ -41,8 +43,8 @@
        
        }
    h3{
-   
-       top: 1px;
+    font: normal bold normal 1.8em/1em Gloria;
+      top: 1px;
        color:rgb(255, 255, 255);
        background-color: rgb(5, 4, 0);
        border-right: 2px solid black;

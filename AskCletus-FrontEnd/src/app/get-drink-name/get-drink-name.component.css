@@ -1,9 +1,12 @@
 @media only screen and (min-width: 100px) {
 
     label {
-      font: normal normal normal 1em/1em helvetica, sans-serif;
-      color: rgb(255, 255, 255);
-      text-shadow: 2px 2px 1px black;
+        text-shadow: 2px 2px 1px black;
+  
+      font: normal bold normal 0.8em/1em Gloria;
+          color:rgb(255, 255, 255);
+          text-shadow: 2px 2px 1px black;
+          margin: 2px;
     }
   
   
@@ -32,4 +35,16 @@
         text-decoration: none;
     }
       
+  }
+  @media only screen and (min-width: 600px) {
+    label {
+      
+        text-shadow: 2px 2px 1px black;
+    
+        font: normal bold normal 1.2em/1em Gloria;
+            color:rgb(255, 255, 255);
+            text-shadow: 3px 3px 2px black;
+            margin: 2px;
+        }
+
   }
