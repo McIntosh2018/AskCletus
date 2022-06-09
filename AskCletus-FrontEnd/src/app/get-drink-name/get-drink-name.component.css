@@ -17,7 +17,7 @@
 
       .bar-container{
         max-height: 200px;
-        max-width: 100px;
+        max-width: 200px;
         background-color:rgb(255, 229, 31);
         overflow-x: hidden;
         overflow-y: auto;

@@ -4,8 +4,7 @@
 </form>
 <ul class="bar-container">
   <li *ngFor="let drink of drinks$ | async" class="list-container">
-    <a [routerLink]="['/search-results', drink.idDrink]"
-    target="_blank" rel="noopener noreferrer">{{ drink.strDrink }}</a>
+    <a [routerLink]="['/search-results', drink.idDrink]">{{ drink.strDrink }}</a>
   </li>
 </ul>
 <div id = "hiddenArrow"></div>

@@ -1,9 +1,8 @@
 <button mat-raised-button color="accent" [matMenuTriggerFor]="menu">
- <span> Random drank?</span>
+ <span>Random drank?</span>
 </button>
 <mat-menu #menu="matMenu">
   <button mat-menu-item *ngIf="randomDrink$ | async as drinks">
-    <a [routerLink]="['/search-results', drinks.drinks[0].idDrink]"
-    target="_blank" rel="noopener noreferrer">{{ drinks.drinks[0].strDrink }}</a>
+    <a [routerLink]="['/search-results', drinks.drinks[0].idDrink]">{{ drinks.drinks[0].strDrink }}</a>
   </button>
 </mat-menu>
