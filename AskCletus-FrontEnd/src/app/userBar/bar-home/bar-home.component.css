@@ -1,22 +1,24 @@
 @media only screen and (min-width: 300px) {
 
     #barHome{
+        margin-top: 370px;
         display: flex;
         flex-direction: column;
+       
+        align-items: center;
         height: 100vh;
         width: 100vw;
     }
-    .bar-container {
+   
+    ul{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
-        list-style: none;
-        flex-wrap: wrap;
-        width: 90vw;
-        height: 70vh;
+        width: 80vw;
+        height:300px;
+        max-width: 700px;
+        scroll-behavior: smooth;
     }
-    
-
 
     ul li{
         display: flex;
@@ -32,11 +34,10 @@
         background-attachment: fixed;
         height: 40px;
         width: 40px;
-        margin: 2em;
+        margin: 4px;
         padding: 2em;
         color:rgb(255, 255, 255);
         text-shadow: 1px 1px black;
-
     }
 
     li p{
@@ -59,10 +60,18 @@ background-color: rgb(255, 226, 5);
     .bar-bottom{
         display: flex;
         flex-direction: row;
-        width: 50%;
-        height:150px;
-        background-color:rgb(255, 226, 5);
+        width: 80%;
+        height:250px;
         justify-content: center;
+    }
+
+    .bar-bottom:hover{
+
+        background-image:url(../../images/internationalTractor.jpg);
+        background-size: 700px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
     }
 }
 @media only screen and (min-width: 600px) {
@@ -111,12 +120,7 @@ background-color: rgb(255, 226, 5);
 }
 @media only screen and (min-width: 768px) {
 
-    #barHome{
-        width: 100vw;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
+
 
 .bar-container {
     display: flex;
@@ -143,8 +147,8 @@ background-color: rgb(255, 226, 5);
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
-        height: 110px;
-        width: 110px;
+        height: 80px;
+        width: 80px;
         box-shadow: -7px 5px 17px;
         color:rgb(225, 225, 225);
         text-shadow: 2px 2px black;
