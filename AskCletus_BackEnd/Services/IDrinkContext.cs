@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 namespace AskCletus_BackEnd.Services
 {
     public interface IDrinkContext: IAddUser, IGetAllUsers, IUpdateUser, IDeleteUser, IGetBars, IGetMyBar, IDeleteBar, 
-                     IAddBar, IAddDrink, IGetDrinkHistory, IGetAllHistory, IGetUser, IUpsertGitHubUser, IUpdateUserToken, ILogout, IIsLoggedIn
+                     IAddBar, IAddDrink, IGetDrinkHistory, IGetAllHistory, IGetUser, IUpsertGitHubUser, IUpdateUserToken, 
+                     ILogout, IIsLoggedIn, IDeleteHistory
     {
     }
 
+    public interface IDeleteHistory
+    {
+        DrinkHistory DeleteHistory(int userId);
+    }
 
     public interface IAddDrink
     {

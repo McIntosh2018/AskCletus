@@ -32,7 +32,19 @@ namespace AskCletus_BackEnd.Services
         {
             return DrinkHistories;
         }
-        
+
+        public DrinkHistory DeleteHistory(int drinkId)
+        {
+            var dbUsers = DrinkHistories.Find(drinkId);
+            if (dbUsers != null)
+            {
+                var entity = DrinkHistories.Remove(dbUsers).Entity;
+                SaveChanges();
+                return entity;
+            }
+            return null;
+        }
+
         public Ingredients AddBar(Ingredients userIngredient)
         {
             var userEntity = UserIngredient.Add(userIngredient).Entity;

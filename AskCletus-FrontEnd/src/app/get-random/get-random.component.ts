@@ -19,6 +19,7 @@ export class GetRandomComponent implements OnInit {
   ) {
     this.randomDrink$ = this._drinkService.getRandomDrink();
   }
+
   drinks: DrinkResponse[] = [];
   drinkResponse: string = '';
 

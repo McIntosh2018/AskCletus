@@ -5,4 +5,4 @@ export interface HistoryResponse {
         userId: number
     }
     
-    export type PostHistory = Omit<HistoryResponse, "historyId">;
+    export type PostHistory = Omit<HistoryResponse, "historyId" | "dateTime">; 
