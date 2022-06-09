@@ -1,7 +1,8 @@
 #how-to{
-    background-color: aliceblue;
+   
     max-width: 500px;
     border: 2px solid black;
     border-radius: 5px;
     padding: 4px;
+    background-color: rgb(246, 221, 0);
 }
