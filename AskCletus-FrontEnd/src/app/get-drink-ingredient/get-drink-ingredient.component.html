@@ -1,13 +1,11 @@
 <form>
-  <label>Search For A Drink By Ingredient</label>
+  <label>Search For Drank By Ingredient</label>
   <input type="text" [formControl]="drinkNameControl" />
 </form>
-
 <ul class="bar-container">
   <li *ngFor="let drink of drinks$ | async" class="list-container">
     <a [routerLink]="['/search-results', drink.idDrink]"
     target="_blank" rel="noopener noreferrer">{{ drink.strDrink }}</a>
   </li>
 </ul>
-
 <div id = "hiddenArrow"></div>

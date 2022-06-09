@@ -33,7 +33,7 @@ const routes: Routes = [
     component: BarHomeComponent
   },
   {
-    path: "app-drink-history",
+    path: "app-drink-history/:id",
     component: DrinkHistoryComponent
   },
   {

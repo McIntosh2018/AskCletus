@@ -1,15 +1,13 @@
 <div id = "how-to">
-
-	<ng-container *ngIf="drink$ | async as drinks; else gettingDrink" >
+	<ng-container *ngIf="drinkHistory$ | async as drinks; else gettingDrink" >
 			<p>{{drinks.drinks[0].strDrink}}</p>
 			<p>{{drinks.drinks[0].strInstructions}}</p>
-			<p>{{drinks.drinks[0].strIngredient1}}: {{drinks.drinks[0].strMeasure1}}</p>
-			<p>{{drinks.drinks[0].strIngredient2}}: {{drinks.drinks[0].strMeasure2}}</p>
-			<p>{{drinks.drinks[0].strIngredient3}}: {{drinks.drinks[0].strMeasure3}}</p>
-			<a [routerLink]="['/app-drink-history', drinks.drinks[0].idDrink]">Add This Drink To Your History</a>
+			<p>{{drinks.drinks[0].strMeasure1}} {{drinks.drinks[0].strIngredient1}}</p>
+			<p>{{drinks.drinks[0].strMeasure2}} {{drinks.drinks[0].strIngredient2}}</p>
+			<p>{{drinks.drinks[0].strMeasure3}} {{drinks.drinks[0].strIngredient3}}</p>
+			<p>{{drinks.drinks[0].strMeasure4}} {{drinks.drinks[0].strIngredient4}}</p>
 	</ng-container>
 	<ng-template #gettingDrink>
 		Getting yo drank foo
 	</ng-template>
-
 </div>
