@@ -1,11 +1,13 @@
 .mat-menu{
     background-color: rgb(246, 221, 0);
+  
 }
 
-a{
+ a, span{
+    font: normal bold normal 1.2em/1em Gloria;
     text-decoration: none;
     color: black;
-    
+
 
 }
 
