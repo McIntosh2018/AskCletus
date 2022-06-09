@@ -59,5 +59,16 @@ namespace AskCletus_BackEnd.Controllers
             var dbDrink = _drinkHistoryContext.AddDrink(drink);
             return Created($"https://localhost:5001/{dbDrink}", dbDrink);
         }
+
+        [HttpDelete("{drinkId}")]
+        public IActionResult DeleteBar(int drinkId)
+        {
+            var dbUserHistory = _drinkHistoryContext.DeleteHistory(drinkId);
+            if (dbUserHistory != null)
+            {
+                return Accepted("History deleted");
+            }
+            return NotFound("This bar does not exist");
+        }
     }
 }

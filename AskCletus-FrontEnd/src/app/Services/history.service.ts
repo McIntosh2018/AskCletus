@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { HistoryResponse } from 'src/app/models/HistoryResponse';
+import { HistoryResponse, PostHistory } from 'src/app/models/HistoryResponse';
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +23,9 @@ export class HistoryService {
 
   public getHistory(userId: number) {
     return this.httpClient.get<Array<HistoryResponse>>(`${this.baseUrl}/${userId}`);
+  }
+
+  postHistory(userHistory: PostHistory) {
+    return this.httpClient.post<HistoryResponse>(this.baseUrl, userHistory);
   }
 }
