@@ -10,6 +10,10 @@
     </ul>
   </ng-container>
   <div class="bar-bottom">
+    <button mat-raised-button color ="accent"><a [routerLink]="['/addIngredient']" 
+      target="_blank" rel="noopener noreferrer">
+      <mat-icon> local_drink</mat-icon><span>Add Ingredient</span></a></button>
+      
     <app-drink-history></app-drink-history>
     <app-get-random></app-get-random>
     <app-get-drink-ingredient></app-get-drink-ingredient>
