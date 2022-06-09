@@ -1,5 +1,5 @@
 <button mat-raised-button color="accent" [matMenuTriggerFor]="menu">
- <span> Random drank?</span>
+  Random drank?
 </button>
 <mat-menu #menu="matMenu">
   <button mat-menu-item *ngIf="randomDrink$ | async as drinks">
