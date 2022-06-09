@@ -20,10 +20,6 @@ export class BarHomeComponent implements OnInit {
     private _authService: AuthService,
     private _router: Router) { }
 
-  //grab user to get userId to get their version of the bar
-  //if no user, don't stay on this page
-  //if user get userId for user bar
-
   bars: IngredientsResponse[] = []
 
   userBar$ = this._authService.user$.pipe(
